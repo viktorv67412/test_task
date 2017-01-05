@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body>
+
+<div class="header"></div>
+
+<div class="leftArea">
+    <ul id="productList"></ul>
+</div>
+
+<div id="mainArea"></div>
+
+<script type="text/template" id="header">
+    <button class="new">new</button>
+</script>
+
+<script type="text/template" id="product-list-item">
+    <li><a href='#products/<%=id %>'><%=date%> , <%=name%> , <%=price%> </a></li>
+</script>
+
+<script type="text/template" id="product-details">
+
+    <div class="form-left-col">
+
+        <label>id:</label>
+        <input type="text" id="productId" name="id" value="<%=id%>" disabled/>
+
+        <label>date:</label>
+        <input type="text" id="date" name="date" value="<%=date%>" required/>
+
+        <label>name:</label>
+        <input type="text" id="name" name="name" value="<%=name%>" required/>
+
+        <label>price:</label>
+        <input type="text" id="price" name="price" value="<%=price%>" required/>
+
+        <button class="save">save</button>
+        <button class="delete">delete</button>
+
+    </div>
+
+</script>
+<script src="http://code.jquery.com/jquery-latest.js"/>
+<script src="js/lib/jquery-1.7.1.min.js"></script>
+<script src="js/lib/underscore-min.js"></script>
+<script src="js/lib/backbone-min.js"></script>
+<script src="js/app/main.js"></script>
+</body>
+</html>
